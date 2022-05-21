@@ -17,7 +17,7 @@ import javax.swing.DefaultListModel;
 public class jfrmHienThi extends javax.swing.JFrame {
     
     final int SLEEPTIME_C = 1000;    
-    final int SLEEPTIME_P = 500;
+    final int SLEEPTIME_P = 400;
 
     
     public static Semaphore writePermits;
@@ -348,7 +348,7 @@ public class jfrmHienThi extends javax.swing.JFrame {
                 try {
                     while (isRunning) {
                         readPermits.acquire();
-                        Thread.sleep(SLEEPTIME_C + 100); // simulate time to work
+                        Thread.sleep(SLEEPTIME_C + 200); // simulate time to work
                         String a = buffer.pop()+"";
 
                         modelC3.insertElementAt(a, 0);                    
